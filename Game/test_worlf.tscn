@@ -1,15 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cyv6wseu58sca"]
+[gd_scene load_steps=4 format=3 uid="uid://cyv6wseu58sca"]
 
-[ext_resource type="Script" path="res://Controller.gd" id="1_fmja1"]
+[ext_resource type="PackedScene" uid="uid://b738w140wek1g" path="res://player.tscn" id="1_6fjb1"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_yeemt"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_hm350"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f5taa"]
-
-[node name="Test Worlf" type="Node3D"]
+[node name="Test World" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -22.3646, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_yeemt")
@@ -19,11 +18,4 @@ mesh = SubResource("BoxMesh_yeemt")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D2"]
 shape = SubResource("ConcavePolygonShape3D_hm350")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.71076, 0)
-script = ExtResource("1_fmja1")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-shape = SubResource("CapsuleShape3D_f5taa")
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_6fjb1")]

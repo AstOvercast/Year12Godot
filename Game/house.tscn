@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://vmvue1olk7s8"]
+
+[ext_resource type="PackedScene" uid="uid://dhgq6nlaxpdg7" path="res://untitled.glb" id="1_uaxfd"]
+[ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_7f7kh"]
+
+[node name="House" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0249748, 2.77516, 0)
+
+[node name="untitled" parent="." instance=ExtResource("1_uaxfd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31711, -1.82033, 0.507366)
+
+[node name="Player" parent="." instance=ExtResource("2_7f7kh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31711, 4.05338, -0.050813)
