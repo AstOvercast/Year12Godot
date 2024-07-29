@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var speed = 5
+@export var speed = 6
 @export var mouse_sensitivity = 0.01
 @onready var camera = $Camera3D
 @export var jump_speed = 5

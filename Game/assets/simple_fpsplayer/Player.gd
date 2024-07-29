@@ -9,7 +9,7 @@ const JUMP_VELOCITY = 6.5
 const MOUSE_SENSITIVITY = 0.06
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var camera
 var rotation_helper
