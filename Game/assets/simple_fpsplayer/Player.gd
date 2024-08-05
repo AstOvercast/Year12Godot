@@ -9,7 +9,7 @@ const JUMP_VELOCITY = 6.5
 const MOUSE_SENSITIVITY = 0.06
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var camera
 var rotation_helper
@@ -71,7 +71,7 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with a custom keymap depending on your control scheme. These strings default to the arrow keys layout.
-	var input_dir = Input.get_vector ("left","right","up","down")
+	var input_dir = Input.get_vector ("ui_left","ui_right","ui_up","ui_down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized() * accel * delta
 	if Input.is_key_pressed(KEY_SHIFT):
 		direction = direction * SPRINT_MULT

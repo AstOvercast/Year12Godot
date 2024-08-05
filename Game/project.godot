@@ -11,13 +11,20 @@ config_version=5
 [application]
 
 config/name="FirstPersonTemplate"
-run/main_scene="res://node_3d.tscn"
+run/main_scene="res://mainmenu/scenes/Menus/MainMenu/MainMenuWithAnimations.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.png"
 
+[autoload]
+
+AppConfig="*res://addons/maaacks_menus_template/base/scenes/Autoloads/AppConfig.tscn"
+SceneLoader="*res://addons/maaacks_menus_template/base/scenes/Autoloads/SceneLoader.tscn"
+ProjectMusicController="*res://addons/maaacks_menus_template/base/scenes/Autoloads/ProjectMusicController.tscn"
+ProjectUISoundController="*res://addons/maaacks_menus_template/base/scenes/Autoloads/ProjectUISoundController.tscn"
+
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/maaacks_menus_template/plugin.cfg")
 
 [filesystem]
 
@@ -72,6 +79,11 @@ RUN={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
+
+[maaacks_menus_template]
+
+disable_plugin_dialogues=true
+copy_path="res://mainmenu"
 
 [shader_globals]
 
