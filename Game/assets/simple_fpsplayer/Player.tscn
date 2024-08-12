@@ -32,3 +32,8 @@ script = ExtResource("2_gwqkd")
 
 [node name="GrabPosition3D" type="Marker3D" parent="rotation_helper/Camera3D/ability_grab"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.507213, 0)
+target_position = Vector3(0, 0, -2)
+collision_mask = 8

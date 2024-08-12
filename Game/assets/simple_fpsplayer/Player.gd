@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 const ACCEL = 10
 const DEACCEL = 30
+@onready var door_check = $RayCast3D
 
 const SPEED = 5.0
 const SPRINT_MULT = 2
@@ -43,6 +44,12 @@ func _input(event):
 	
 	# Flashlight toggle. Defaults to F on Keyboard.
 	if event is InputEventKey:
+		if event.pressed and event.keycode == KEY_E:
+			print("pushed e")
+			if door_check.is_colliding():
+				print("ray is colliding")
+				var collider = door_check.get_collider()
+				collider.owner.get_node("AnimationPlayer").play("open_door")
 		if event.pressed and event.keycode == KEY_F:
 			if flashlight.is_visible_in_tree() and not event.echo:
 				flashlight.hide()

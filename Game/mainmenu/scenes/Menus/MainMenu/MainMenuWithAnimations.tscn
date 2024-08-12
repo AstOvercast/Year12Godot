@@ -363,12 +363,17 @@ parameters/conditions/intro_done = false
 
 [node name="VersionNameLabel" parent="." index="5"]
 modulate = Color(1, 1, 1, 0)
+text = "1.1.1
+"
 
 [node name="Title" parent="MenuContainer/VBoxContainer/TitlesMargin/TitlesContainer" index="0"]
 modulate = Color(1, 1, 1, 0)
+text = "Kill it with fire"
 
 [node name="SubTitle" parent="MenuContainer/VBoxContainer/TitlesMargin/TitlesContainer" index="1"]
 modulate = Color(1, 1, 1, 0)
+text = "Advanced spider
+"
 
 [node name="MenuButtons" parent="MenuContainer/VBoxContainer/MenuMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
