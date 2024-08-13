@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://qh7sv8ky2y1h"]
+[gd_scene load_steps=17 format=3 uid="uid://qh7sv8ky2y1h"]
 
 [ext_resource type="PackedScene" uid="uid://ccnb4gklsmu8e" path="res://mainmenu/scenes/Menus/MainMenu/MainMenu.tscn" id="1_dj6x7"]
 [ext_resource type="Script" path="res://mainmenu/scenes/Menus/MainMenu/MainMenuWithAnimations.gd" id="2_y2af8"]
+[ext_resource type="Texture2D" uid="uid://bsxx5b0g7gwuy" path="res://Kill it with spider.PNG" id="3_dvixo"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -368,7 +369,8 @@ text = "1.1.1
 
 [node name="Title" parent="MenuContainer/VBoxContainer/TitlesMargin/TitlesContainer" index="0"]
 modulate = Color(1, 1, 1, 0)
-text = "Kill it with fire"
+text = "Burn it with fire
+"
 
 [node name="SubTitle" parent="MenuContainer/VBoxContainer/TitlesMargin/TitlesContainer" index="1"]
 modulate = Color(1, 1, 1, 0)
@@ -378,3 +380,9 @@ text = "Advanced spider
 [node name="MenuButtons" parent="MenuContainer/VBoxContainer/MenuMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 lock = true
+
+[node name="KillItWithSpider" type="Sprite2D" parent="." index="10"]
+show_behind_parent = true
+position = Vector2(593, 382)
+scale = Vector2(1.55019, 1)
+texture = ExtResource("3_dvixo")

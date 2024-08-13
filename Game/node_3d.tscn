@@ -65,7 +65,7 @@ current = true
 fov = 85.0
 
 [node name="ground" parent="." instance=ExtResource("2_doeps")]
-transform = Transform3D(0.340957, 0, 0, 0, 6.72869, -0.0126542, 0, 0.0896072, 0.950214, 1.10963, -4.15891, 8.62519)
+transform = Transform3D(1.10432, 0, 0, 0, 6.92161, -0.0398986, 0, 0.0921764, 2.99602, 1.10963, -4.15891, 8.62519)
 
 [node name="wall" parent="." instance=ExtResource("2_doeps")]
 transform = Transform3D(-9.61721e-09, -28.6191, 0, 0.219995, -1.25086e-06, -0.0134407, 0.0030719, -1.74664e-08, 0.962554, 7.625, 0.66939, 8.62519)
