@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsxx5b0g7gwuy"
-path="res://.godot/imported/Kill it with spider.PNG-d641d2565346f94fe9fe3fd8007251fa.ctex"
+uid="uid://rckqdlykadsn"
+path="res://.godot/imported/image.jpg-7651923925b991ea0badbbbe9c8aa16a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Kill it with spider.PNG"
-dest_files=["res://.godot/imported/Kill it with spider.PNG-d641d2565346f94fe9fe3fd8007251fa.ctex"]
+source_file="res://image.jpg"
+dest_files=["res://.godot/imported/image.jpg-7651923925b991ea0badbbbe9c8aa16a.ctex"]
 
 [params]
 

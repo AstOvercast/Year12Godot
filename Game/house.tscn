@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://vmvue1olk7s8"]
+[gd_scene load_steps=8 format=3 uid="uid://vmvue1olk7s8"]
 
 [ext_resource type="PackedScene" uid="uid://dhgq6nlaxpdg7" path="res://untitled.glb" id="1_uaxfd"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_7f7kh"]
 [ext_resource type="PackedScene" uid="uid://cs2wpe78sjpo5" path="res://Door.glb" id="3_cpqb5"]
+[ext_resource type="PackedScene" uid="uid://db8vggam5anyb" path="res://Key.glb" id="4_qxe3h"]
 
 [sub_resource type="Animation" id="Animation_hvo0j"]
 length = 0.001
@@ -113,6 +114,9 @@ collision_layer = 9
 libraries = {
 "": SubResource("AnimationLibrary_frtps")
 }
+
+[node name="Key" parent="." instance=ExtResource("4_qxe3h")]
+transform = Transform3D(0.364067, 0, 0, 0, 0.509942, 0, 0, 0, 1, -4.07731, 0.735505, -2.49263)
 
 [editable path="DoorHinge/Door"]
 [editable path="Door Component/DoorHinge2/Door"]

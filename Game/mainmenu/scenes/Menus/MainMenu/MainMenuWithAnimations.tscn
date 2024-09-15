@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://qh7sv8ky2y1h"]
+[gd_scene load_steps=17 format=3 uid="uid://qh7sv8ky2y1h"]
 
 [ext_resource type="PackedScene" uid="uid://ccnb4gklsmu8e" path="res://mainmenu/scenes/Menus/MainMenu/MainMenu.tscn" id="1_dj6x7"]
 [ext_resource type="Script" path="res://mainmenu/scenes/Menus/MainMenu/MainMenuWithAnimations.gd" id="2_y2af8"]
+[ext_resource type="Texture2D" uid="uid://rckqdlykadsn" path="res://image.jpg" id="3_jva2t"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -361,6 +362,9 @@ tree_root = SubResource("AnimationNodeStateMachine_vikuh")
 anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
 
+[node name="BackgroundMusicPlayer" parent="." index="3"]
+volume_db = 24.0
+
 [node name="VersionNameLabel" parent="." index="5"]
 modulate = Color(1, 1, 1, 0)
 text = "1.1.1
@@ -379,3 +383,9 @@ text = "Advanced look simulator
 [node name="MenuButtons" parent="MenuContainer/VBoxContainer/MenuMargin" index="0"]
 modulate = Color(1, 1, 1, 0)
 lock = true
+
+[node name="Image" type="Sprite2D" parent="." index="10"]
+z_index = -3
+position = Vector2(577, 323.25)
+scale = Vector2(2.24609, 1.25684)
+texture = ExtResource("3_jva2t")
