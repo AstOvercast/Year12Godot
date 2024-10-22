@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://vmvue1olk7s8"]
+[gd_scene load_steps=9 format=3 uid="uid://vmvue1olk7s8"]
 
 [ext_resource type="PackedScene" uid="uid://dhgq6nlaxpdg7" path="res://untitled.glb" id="1_uaxfd"]
 [ext_resource type="PackedScene" uid="uid://dgpjxoygnvyy4" path="res://assets/simple_fpsplayer/Player.tscn" id="2_7f7kh"]
@@ -40,6 +40,9 @@ _data = {
 "RESET": SubResource("Animation_hvo0j"),
 "open_door": SubResource("Animation_earc0")
 }
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ijqgp"]
+size = Vector3(13.285, 6.29, 20.15)
 
 [node name="House" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0249748, 2.77516, 0)
@@ -124,8 +127,17 @@ transform = Transform3D(0.143201, 0, 0, 0, 0.155523, 0, 0, 0, 0.193645, -11.338,
 [node name="Bedroom1_key" parent="." instance=ExtResource("4_qxe3h")]
 transform = Transform3D(0.143201, 0, 0, 0, 0.155523, 0, 0, 0, 0.193645, -15.8373, -1.39681, 13.2074)
 
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.0262293, 0, -0.999656, 0, 1, 0, 0.999656, 0, 0.0262293, 17.4973, -1.49217, -0.38735)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(-0.0102608, 0.0356777, -0.999311, -0.00105901, -0.999363, -0.0356687, -0.999947, 0.000692289, 0.0102921, 0, 0, 0)
+shape = SubResource("BoxShape3D_ijqgp")
+
 [node name="Bedroom2_key" parent="." instance=ExtResource("4_qxe3h")]
 transform = Transform3D(0.00375605, 0, -0.193578, 0, 0.155523, 0, 0.143151, 0, 0.00507918, -3.27542, -1.49217, 2.79364)
+
+[connection signal="body_entered" from="Area3D" to="Player" method="_on_area_3d_body_entered"]
 
 [editable path="DoorHinge/Door"]
 [editable path="Door Component/DoorHinge2/Door"]

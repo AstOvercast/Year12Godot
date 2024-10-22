@@ -4,6 +4,7 @@ var animation_state_machine : AnimationNodeStateMachinePlayback
 
 func intro_done():
 	animation_state_machine.travel("OpenMainMenu")
+	#states what happens after loading screen
 
 func _is_in_intro():
 	return animation_state_machine.get_current_node() == "Intro"
@@ -16,6 +17,7 @@ func _event_skips_intro(event : InputEvent):
 		event.is_action_released("ui_select") or \
 		event.is_action_released("ui_cancel") or \
 		_event_is_mouse_button_released(event)
+		#whatever button the user clicks, this means that they will trigger that button
 
 func _open_sub_menu(menu):
 	super._open_sub_menu(menu)
